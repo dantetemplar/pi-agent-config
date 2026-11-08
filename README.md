@@ -15,13 +15,7 @@ We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) through Pi's 
 
 ## Working from Russia Without a VPN
 
-This stack runs from Russia without a VPN because CLIProxyAPI runs on an intermediate server. This machine only talks to the proxy, and the proxy makes the upstream requests. Pendant (a local VS Code extension), Pi, and its extensions all run locally.
-
-- **Models:** everything comes from Pi's `router` provider pointed at the proxy — DeepSeek through `cpa-deepseek`, and the Claude Code and Codex subscriptions connected to the same proxy.
-- **Web search:** provider-native search with the selected model ([web search plugin](https://github.com/dantetemplar/pi-agent-config/tree/pi-sync/files/extensions/pi-web-search-local)).
-- **Web fetch:** [@pi-lab/webfetch](https://www.npmjs.com/package/@pi-lab/webfetch) downloads pages with ordinary HTTPS requests, so it depends only on the target site.
-
-Proxy and provider availability can change over time and is not guaranteed; verify it on your own connection.
+This stack runs from Russia without a VPN because CLIProxyAPI runs on an intermediate server. This machine only talks to the proxy, and the proxy makes the upstream requests. Pendant (a local VS Code extension), Pi, and its extensions all run locally. DeepSeek is the exception: its requests go directly to the API, bypassing the proxy, because DeepSeek is reachable from Russia.
 
 ## Pendant Settings
 
