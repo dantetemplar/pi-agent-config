@@ -6,7 +6,7 @@ This repository stores my personal Pi configuration, synchronized with [Pi Sync]
 
 We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) through Pi's `router` provider, with [dillonzq/cpa-deepseek](https://github.com/dillonzq/cpa-deepseek) for DeepSeek support. Our Codex and Claude Code subscriptions are connected through the proxy. The [autodiscovery extension](https://github.com/dantetemplar/pi-agent-config/blob/pi-sync/files/extensions/router-autodiscovery.ts) loads available models and selects the appropriate API. Authenticate with `/login`, choose `router`, then select a model with `/model`.
 
-[cliproxy-usage](https://github.com/Zigerry/cliproxy-usage) shows account quotas. Run `/cliproxy-usage setup` in a Pi terminal using the Management URL `https://cpa.belkov.su` and its management password—not the inference API key. Open `/cliproxy-usage` for details.
+[cliproxy-usage](https://github.com/Zigerry/cliproxy-usage) shows account quotas. Run `/cliproxy-usage setup` in a Pi terminal using the proxy's Management URL and management password—not the inference API key. Open `/cliproxy-usage` for details.
 
 ## Web Search and Web Fetch
 
