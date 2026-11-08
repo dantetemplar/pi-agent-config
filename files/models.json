@@ -1,0 +1,13 @@
+{
+  "$schema": "https://pi.dev/schemas/models.schema.json",
+  "providers": {
+    "router": {
+      "name": "CLIProxyAPI (cpa.belkov.su)",
+      "baseUrl": "https://cpa.belkov.su/v1",
+      "api": "openai-completions",
+      "headers": {
+        "Accept-Encoding": "identity"
+      }
+    }
+  }
+}
