@@ -15,13 +15,13 @@ We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) through Pi's 
 
 ## Working from Russia Without a VPN
 
-This stack is set up to run from Russia without a VPN: Pendant as a local VS Code extension, Pi and its extensions running locally, a DeepSeek model, provider-native DeepSeek search, and `webfetch` over plain HTTPS. No Anthropic, OpenAI, or Google endpoint is required for this path.
+This stack runs from Russia without a VPN because CLIProxyAPI runs on an intermediate server. This machine only talks to the proxy, and the proxy makes the upstream requests. Pendant (a local VS Code extension), Pi, and its extensions all run locally.
 
-- **Model:** DeepSeek through Pi's built-in `deepseek` provider, which talks to `api.deepseek.com` directly.
-- **Web search:** DeepSeek's server-side search on its Anthropic-compatible endpoint, using the same provider and credentials ([web search plugin](https://github.com/dantetemplar/pi-agent-config/tree/pi-sync/files/extensions/pi-web-search-local)).
+- **Models:** everything comes from Pi's `router` provider pointed at the proxy — DeepSeek through `cpa-deepseek`, and the Claude Code and Codex subscriptions connected to the same proxy.
+- **Web search:** provider-native search with the selected model ([web search plugin](https://github.com/dantetemplar/pi-agent-config/tree/pi-sync/files/extensions/pi-web-search-local)).
 - **Web fetch:** [@pi-lab/webfetch](https://www.npmjs.com/package/@pi-lab/webfetch) downloads pages with ordinary HTTPS requests, so it depends only on the target site.
 
-Models from the Claude Code and Codex subscriptions reach the proxy through different upstreams and may still require a VPN, depending on your network. Provider availability can change over time and is not guaranteed; verify it on your own connection.
+Proxy and provider availability can change over time and is not guaranteed; verify it on your own connection.
 
 ## Pendant Settings
 
