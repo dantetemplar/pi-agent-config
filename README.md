@@ -4,7 +4,7 @@ This repository stores my personal Pi configuration, synchronized with [Pi Sync]
 
 ## Pendant Settings
 
-These are the explicitly configured settings that differ from the defaults in Pendant **0.94.2**. Settings not listed here keep their defaults.
+These are the explicitly configured settings that differ from the defaults in Pendant **0.94.2**.
 
 | Setting | My value | Default |
 | --- | --- | --- |
@@ -19,4 +19,4 @@ These are the explicitly configured settings that differ from the defaults in Pe
 | `pendant.generationSpeedUpdateInterval` | `1000` ms | `150` ms |
 | `pendant.restoreLastSessionOnStartup` | `true` | `false` |
 
-Pendant's **Add Selection to Chat** command is remapped to **Ctrl+L** in VS Code.
+Pendant has been moved to the **Secondary Side Bar** and hidden from the other UI locations, keeping a single place to open and use it. Pendant's **Add Selection to Chat** command is remapped to **Ctrl+L** in VS Code.
