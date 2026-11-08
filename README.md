@@ -19,6 +19,4 @@ These are the explicitly configured settings that differ from the defaults in Pe
 | `pendant.generationSpeedUpdateInterval` | `1000` ms | `150` ms |
 | `pendant.restoreLastSessionOnStartup` | `true` | `false` |
 
-Pendant has been moved to the **Secondary Side Bar** and hidden from the other UI locations, keeping a single place to open and use it. This is an editor layout preference, separate from Pendant's session rail position, and is configured manually rather than synchronized by Pi Sync.
-
 Pendant's **Add Selection to Chat** command is remapped to **Ctrl+L** in VS Code.
