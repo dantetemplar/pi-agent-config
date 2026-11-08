@@ -1,6 +1,6 @@
 # Pi Configuration
 
-This repository stores my personal Pi configuration, synchronized with [Pi Sync](https://www.npmjs.com/package/@narumitw/pi-sync). Synced files live under `files/` and include agent settings, extensions, prompts, skills, and themes; credentials, sessions, caches, and local recovery state are excluded from this setup. I use [Pendant](https://pendant.sh/) as the VS Code interface to Pi. Pendant preferences are configured manually and documented below, not synchronized; no additional settings bridge, CLI, or background service is required.
+This repository stores my personal Pi configuration, synchronized with [Pi Sync](https://www.npmjs.com/package/@narumitw/pi-sync). Synced files live under `files/` and include agent settings, extensions, prompts, skills, and themes; credentials, sessions, caches, and local recovery state are excluded from this setup. I use [Pendant](https://pendant.sh/) as the VS Code interface to Pi. Pendant preferences are configred manually and documented below, not synchronized; no additional settings bridge, CLI, or background service is required.
 
 ## Pendant Settings
 

@@ -317,9 +317,6 @@ async function getJson(url: string, config: RouterConfig, signal?: AbortSignal):
   const timeout = AbortSignal.timeout(FETCH_TIMEOUT_MS);
   const headers: Record<string, string> = {
     "User-Agent": `pi/${CLIENT_VERSION}`,
-    // The proxy mislabels/streams compressed bodies in a way undici never
-    // finishes reading, so ask for the plain body.
-    "Accept-Encoding": "identity",
   };
   if (config.apiKey) headers.Authorization = `Bearer ${config.apiKey}`;
   const response = await fetch(url, {
