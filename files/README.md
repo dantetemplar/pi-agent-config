@@ -20,6 +20,6 @@ These are the explicitly configured settings that differ from the defaults in Pe
 
 The pinned model requires the corresponding `router` provider and model to be available. Choose the notification sound file separately on each machine; the audio file and its local path are not synchronized.
 
-## VS Code Layout
-
 Pendant has been moved to the **Secondary Side Bar** and hidden from the other UI locations, keeping a single place to open and use it. This is an editor layout preference, separate from Pendant's session rail position, and is configured manually rather than synchronized by Pi Sync.
+
+Pendant's **Add Selection to Chat** command is remapped to **Ctrl+L** in VS Code.
