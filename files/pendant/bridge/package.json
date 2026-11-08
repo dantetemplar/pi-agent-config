@@ -1,0 +1,11 @@
+{
+  "name": "pendant-settings-bridge",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone CLI bridge between user-level Pendant settings and Pi Sync. No VS Code extension or daemon.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "bin": { "pendant-settings": "./cli.js" },
+  "scripts": { "test": "node --test test/*.test.js" },
+  "dependencies": { "jsonc-parser": "3.3.1" }
+}
