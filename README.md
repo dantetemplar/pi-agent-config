@@ -4,9 +4,14 @@ This repository stores my personal Pi configuration, synchronized with [Pi Sync]
 
 ## CLIProxyAPI
 
-We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) at `https://cpa.belkov.su/v1` through Pi's `router` provider. The [autodiscovery extension](https://github.com/dantetemplar/pi-agent-config/blob/pi-sync/files/extensions/router-autodiscovery.ts) loads available models and selects the appropriate API. Authenticate with `/login`, choose `router`, then select a model with `/model`. The [web search plugin](https://github.com/dantetemplar/pi-agent-config/tree/pi-sync/files/extensions/pi-web-search-local) uses provider-native search: Claude web search, Codex web search, or DeepSeek search.
+We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) at `https://cpa.belkov.su/v1` through Pi's `router` provider. The [autodiscovery extension](https://github.com/dantetemplar/pi-agent-config/blob/pi-sync/files/extensions/router-autodiscovery.ts) loads available models and selects the appropriate API. Authenticate with `/login`, choose `router`, then select a model with `/model`.
 
 [cliproxy-usage](https://github.com/Zigerry/cliproxy-usage) shows account quotas. Run `/cliproxy-usage setup` in a Pi terminal using the Management URL `https://cpa.belkov.su` and its management password—not the inference API key. Open `/cliproxy-usage` for details.
+
+## Web Search and Web Fetch
+
+- **Web search:** the [web search plugin](https://github.com/dantetemplar/pi-agent-config/tree/pi-sync/files/extensions/pi-web-search-local) provides `web_search` using provider-native Claude web search, Codex web search, or DeepSeek search.
+- **Web fetch:** [@pi-lab/webfetch](https://www.npmjs.com/package/@pi-lab/webfetch) provides `webfetch` to read URLs as clean Markdown, with pagination and inline-script inspection.
 
 ## Pendant Settings
 
