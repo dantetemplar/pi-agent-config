@@ -1,5 +1,0 @@
-{
-  "provider": "deepseek",
-  "model": "deepseek-flash",
-  "mode": "fallback"
-}
