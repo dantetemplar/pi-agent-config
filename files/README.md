@@ -1,1 +1,25 @@
-This repository stores my portable configuration for Pi and Pendant, synchronized with Pi Sync. It includes agent settings, extensions, prompts, skills, themes, and a standalone `pendant-settings` CLI that merges portable Pendant preferences with VS Code user settings without an additional extension or background service. Pi Sync stores the synchronized files under `files/`; credentials, sessions, caches, machine-specific paths, and local recovery state are excluded from this setup. See the [Pendant settings guide](pendant/README.md) for installation, usage, conflict handling, and recovery instructions.
+# Pi Configuration
+
+This repository stores my personal Pi configuration, synchronized with [Pi Sync](https://www.npmjs.com/package/@narumitw/pi-sync). Synced files live under `files/` and include agent settings, extensions, prompts, skills, and themes; credentials, sessions, caches, and local recovery state are excluded from this setup. I use [Pendant](https://pendant.sh/) as the VS Code interface to Pi. Pendant preferences are configured manually and documented below, not synchronized; no additional settings bridge, CLI, or background service is required.
+
+## Pendant Settings
+
+These are the explicitly configured settings that differ from the defaults in Pendant **0.94.2**. Settings not listed here keep their defaults.
+
+| Setting | My value | Default |
+| --- | --- | --- |
+| `pendant.subagents.delegation` | `"requested"` — delegate only when explicitly requested | `"disabled"` |
+| `pendant.voice.model` | `"base.en-q5_1"` | `"base"` |
+| `pendant.pinnedModels` | `[{"provider":"router","modelId":"gpt-6.1-sol"}]` | `[]` |
+| `pendant.notifications.playSound` | `"whenSessionPing"` | `"whenUnfocused"` |
+| `pendant.notifications.soundFile` | An absolute, machine-local path to `meow.mp3` | `""` |
+| `pendant.markdownDiffViewMode` | `"diff"` — show raw Markdown diffs | `"preview"` |
+| `pendant.sessionRailPosition` | `"right"` | `"left"` |
+| `pendant.generationSpeedUpdateInterval` | `1000` ms | `150` ms |
+| `pendant.restoreLastSessionOnStartup` | `true` | `false` |
+
+The pinned model requires the corresponding `router` provider and model to be available. Choose the notification sound file separately on each machine; the audio file and its local path are not synchronized.
+
+## VS Code Layout
+
+Pendant has been moved to the **Secondary Side Bar** and hidden from the other UI locations, keeping a single place to open and use it. This is an editor layout preference, separate from Pendant's session rail position, and is configured manually rather than synchronized by Pi Sync.
