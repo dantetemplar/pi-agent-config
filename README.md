@@ -4,7 +4,7 @@ This repository stores my personal Pi configuration, synchronized with [Pi Sync]
 
 ## CLIProxyAPI
 
-We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) at `https://cpa.belkov.su/v1` through Pi's `router` provider. The [autodiscovery extension](https://github.com/dantetemplar/pi-agent-config/blob/pi-sync/files/extensions/router-autodiscovery.ts) loads available models and selects the appropriate API. Authenticate with `/login`, choose `router`, then select a model with `/model`.
+We use [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI) at `https://cpa.belkov.su/v1` through Pi's `router` provider, with [dillonzq/cpa-deepseek](https://github.com/dillonzq/cpa-deepseek) for DeepSeek support. The [autodiscovery extension](https://github.com/dantetemplar/pi-agent-config/blob/pi-sync/files/extensions/router-autodiscovery.ts) loads available models and selects the appropriate API. Authenticate with `/login`, choose `router`, then select a model with `/model`.
 
 [cliproxy-usage](https://github.com/Zigerry/cliproxy-usage) shows account quotas. Run `/cliproxy-usage setup` in a Pi terminal using the Management URL `https://cpa.belkov.su` and its management password—not the inference API key. Open `/cliproxy-usage` for details.
 
