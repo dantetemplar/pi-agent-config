@@ -37,9 +37,6 @@ const ZERO_COST = { input: 0, output: 0, cacheRead: 0, cacheWrite: 0 };
 /** Catalog entries that are media generators, not chat models. */
 const NON_CHAT_ID = /(^|[-_.])image([-_.]|$)/i;
 
-/** Served directly by Pi's built-in `deepseek` provider, not through the proxy. */
-const DIRECT_PROVIDER_ID = /^deepseek/iu;
-
 const PI_LEVELS = ["off", "minimal", "low", "medium", "high", "xhigh", "max"] as const;
 type PiLevel = (typeof PI_LEVELS)[number];
 
@@ -334,7 +331,7 @@ async function discover(config: RouterConfig, signal?: AbortSignal) {
     .map((entry) => entry?.id)
     .filter(
       (id): id is string =>
-        typeof id === "string" && id.length > 0 && !NON_CHAT_ID.test(id) && !DIRECT_PROVIDER_ID.test(id),
+        typeof id === "string" && id.length > 0 && !NON_CHAT_ID.test(id),
     );
   if (ids.length === 0) throw new Error(`${config.baseUrl}/models returned no chat models`);
 
@@ -358,7 +355,7 @@ async function discover(config: RouterConfig, signal?: AbortSignal) {
 type DiscoveredModel = Awaited<ReturnType<typeof discover>>[number];
 
 /** Bumped when routing or metadata logic changes, so stale caches are ignored. */
-const CACHE_VERSION = 6;
+const CACHE_VERSION = 7;
 
 function readCache(baseUrl: string): DiscoveredModel[] {
   try {
