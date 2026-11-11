@@ -20,5 +20,7 @@
   "extensions": [
     "-builtin:mcp"
   ],
-  "hideThinkingBlock": false
+  "hideThinkingBlock": false,
+  "defaultProvider": "deepseek",
+  "defaultModel": "deepseek-flash"
 }
